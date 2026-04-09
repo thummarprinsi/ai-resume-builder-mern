@@ -6,9 +6,7 @@ A full-stack AI-powered Resume Builder web application that enables users to cre
 
 ## 🌐 Live Demo
 
-* 🚀 Frontend: https://your-frontend.vercel.app
-* 🔧 Backend API: https://your-backend.onrender.com
-
+* 🚀 Frontend: https://ai-resume-builder-mern-three.vercel.app
 ---
 
 ## ✨ Features
@@ -170,7 +168,6 @@ NODE_ENV=development
 PORT=5000
 MONGO_URI=your_mongodb_url
 JWT_SECRET=your_secret
-isProduction=development
 CLOUDINARY_CLOUD_NAME=your_name
 CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_secret_key
