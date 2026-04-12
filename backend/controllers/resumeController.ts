@@ -277,6 +277,7 @@ const resume = await Resume.findOne({
        });
     }
     catch(error: any){
+        console.log("Analyze Resume Error:", error);
         
         res.status(500).json({
             success: false,
@@ -319,8 +320,10 @@ const resume = await Resume.findOne({
        });
     }
     catch(error: any){
+        console.log("Job Match Error:", error);
         
         res.status(500).json({
+
             success: false,
             message: error.message
         }); 
@@ -352,7 +355,7 @@ export const updateTemplateController = async (req: CustomRequest, res: express.
     const resume = await Resume.findOneAndUpdate(
       { _id: id, userId:userId },
       { templateId },
-      { new: true }
+      { returnDocument: "after" }
     );
 
     if (!resume) {
